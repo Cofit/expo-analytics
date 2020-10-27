@@ -26,7 +26,7 @@
   "homepage": "https://github.com/ryanvanderpol/expo-analytics#readme",
   "dependencies": {
     "expo-constants": "^5.0.1",
-    "expo-updates": "~0.2.8",
+    "expo-updates": "~0.2.8"
   },
   "devDependencies": {
     "expo": "^20.0.0",
