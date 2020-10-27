@@ -1,5 +1,6 @@
 import { Platform, Dimensions } from 'react-native';
 import Constants from 'expo-constants';
+import * as Updates from 'expo-updates'
 
 import { ScreenHit, PageHit, Event, Serializable } from './hits';
 
@@ -32,10 +33,11 @@ export default class Analytics {
         this.propertyId = propertyId;
         this.options = options;
         this.clientId = Constants.installationId;
+        const manifest = Constants.manifest || Updates.manifest
         this.parameters = {
-            an: Constants.manifest.name,
-            aid: Constants.manifest.slug,
-            av: Constants.manifest.version,
+            an: manifest.name,
+            aid: manifest.slug,
+            av: manifest.version,
             sr: `${width}x${height}`,
             ...additionalParameters
         };
